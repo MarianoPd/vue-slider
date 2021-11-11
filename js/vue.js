@@ -5,6 +5,12 @@ const app = new Vue({
       counter: 0,
     },
 
+    mounted(){
+        setInterval(() => {
+            this.next();
+        } , 3000);
+    },
+
     methods:{
         next(){
             (this.counter >= this.images.length -1) ? this.counter = 0 : this.counter++;
@@ -12,6 +18,7 @@ const app = new Vue({
         prev(){
             (this.counter <= 0) ? this.counter = this.images.length - 1 : this.counter--;
         }
-    }
+    },
+    
 
   })
