@@ -13,10 +13,10 @@ const app = new Vue({
 
     methods:{
         next(){
-            (this.counter >= this.images.length -1) ? this.counter = 0 : this.counter++;
+            (++this.counter >= this.images.length -1) ? this.counter = 0 : this.counter;
         },
         prev(){
-            (this.counter <= 0) ? this.counter = this.images.length - 1 : this.counter--;
+            (--this.counter <= 0) ? this.counter = this.images.length - 1 : this.counter;
         }
     },
     

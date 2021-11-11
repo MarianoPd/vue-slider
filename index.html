@@ -13,16 +13,16 @@
     <div id="app">
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <div class="carosello d-flex">
-                <div class="view ">
+                <div class="view">
                     <img :src="images[counter]" alt="">
                 </div><!--
                      
              --><div class="side">
-                    <div v-for="image in images" class="item">
+                    <div v-for="(image,index) in images" class="item">
                         <img :src="image" alt="">
                     </div>
-                    <button @click="prev" id="prev" class="">&uarr;</button>
-                    <button @click="next" id="next" class="">&darr;</button>
+                    <button @click="prev" id="prev" >&uarr;</button>
+                    <button @click="next" id="next" >&darr;</button>
                 </div>
             </div>
         </div>
