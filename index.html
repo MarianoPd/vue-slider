@@ -18,7 +18,7 @@
                 </div><!--
                      
              --><div class="side">
-                    <div v-for="(image,index) in images" class="item">
+                    <div v-for="(image,index) in images" class="item" :class="[(index === counter) ? 'selected'; ]">
                         <img :src="image" alt="">
                     </div>
                     <button @click="prev" id="prev" >&uarr;</button>
