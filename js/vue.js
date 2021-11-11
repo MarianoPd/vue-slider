@@ -17,6 +17,9 @@ const app = new Vue({
         },
         prev(){
             (--this.counter <= 0) ? this.counter = this.images.length - 1 : this.counter;
+        },
+        isEqual(num){
+            return (num === this.counter);
         }
     },
     
